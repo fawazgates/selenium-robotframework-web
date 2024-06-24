@@ -1,3 +1,24 @@
-txtUsername : user-name
-txtPassword : password
-btnLogin : login-button
+txtUsername: user-name
+txtPassword: password
+btnLogin: login-button
+sortOption: product_sort_container
+containerProduct: product_sort_container
+productPageTitle: item_4_title_link
+addToCartButton: add-to-cart-sauce-labs-backpack
+removeFromCartButton: remove-sauce-labs-backpack
+cartBadge: //span[contains(@class, 'shopping_cart_badge')]
+productName: item_4_title_link
+productDetail: //div[@class='inventory_details_name large_size']
+cartButton: shopping_cart_container
+checkoutButton: checkout
+firstNameField: first-name
+lastNameField: last-name
+postalCodeField: postal-code
+continueButton: //*[@id="continue"]
+cancelButton: //*[@id="cancel"]
+finishButton: finish
+errorMessage: //h3[@dataÏ-test='error']
+confirmationMessage: checkout_complete_container
+menuButton: //*[@id="react-burger-menu-btn"]
+logoutLink: //*[@id="logout_sidebar_link"]
+inventoryContainer: inventory_container

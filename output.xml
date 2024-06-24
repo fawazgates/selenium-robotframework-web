@@ -1,56 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.0 on win32)" generated="20220916 20:24:01.457" rpa="false" schemaversion="2">
-<suite id="s1" name="Login" source="C:\Users\alvin\Documents\MySkill\MySkill-RobotFramework\step\login.robot">
+<robot generator="Robot 6.1.1 (Python 3.11.7 on darwin)" generated="20240624 19:42:44.097" rpa="false" schemaversion="4">
+<suite id="s1" name="Login" source="/Users/user/Selenium test robot framework/step/login.robot">
 <kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
 <arg>${WebSauceDemo}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220916 20:24:01.626" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
-<status status="PASS" starttime="20220916 20:24:01.625" endtime="20220916 20:24:04.466"/>
+<msg timestamp="20240624 19:42:44.378" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20240624 19:42:44.377" endtime="20240624 19:42:48.676"/>
 </kw>
-<test id="s1-t1" name="User Login with invalid Username">
-<kw name="Input invalid Username">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${txtUsername}</arg>
-<arg>123</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220916 20:24:04.469" level="INFO">Typing text '123' into text field 'user-name'.</msg>
-<status status="PASS" starttime="20220916 20:24:04.469" endtime="20220916 20:24:04.596"/>
+<test id="s1-t1" name="Akses Langsung ke Halaman Produk Tanpa Login" line="190">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL_PRODUCT}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240624 19:42:48.678" level="INFO">Opening url 'https://www.saucedemo.com/inventory.html'</msg>
+<status status="PASS" starttime="20240624 19:42:48.678" endtime="20240624 19:42:49.258"/>
 </kw>
-<status status="PASS" starttime="20220916 20:24:04.468" endtime="20220916 20:24:04.596"/>
-</kw>
-<kw name="Input password">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${txtPassword}</arg>
-<arg>secret_sauce</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220916 20:24:04.597" level="INFO">Typing text 'secret_sauce' into text field 'password'.</msg>
-<status status="PASS" starttime="20220916 20:24:04.597" endtime="20220916 20:24:04.727"/>
-</kw>
-<status status="PASS" starttime="20220916 20:24:04.597" endtime="20220916 20:24:04.727"/>
-</kw>
-<kw name="Click button login">
-<kw name="Click Element" library="SeleniumLibrary">
+<kw name="Verify Redirected To Login Page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${btnLogin}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220916 20:24:04.729" level="INFO">Clicking element 'login-button'.</msg>
-<status status="PASS" starttime="20220916 20:24:04.729" endtime="20220916 20:24:04.791"/>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240624 19:42:49.259" endtime="20240624 19:42:49.293"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220916 20:24:05.795" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220916 20:24:04.791" endtime="20220916 20:24:05.795"/>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${txtUsername}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240624 19:42:49.306" level="INFO">Current page contains element 'user-name'.</msg>
+<status status="PASS" starttime="20240624 19:42:49.293" endtime="20240624 19:42:49.306"/>
 </kw>
-<status status="PASS" starttime="20220916 20:24:04.728" endtime="20220916 20:24:05.795"/>
+<status status="PASS" starttime="20240624 19:42:49.259" endtime="20240624 19:42:49.306"/>
 </kw>
-<status status="PASS" starttime="20220916 20:24:04.466" endtime="20220916 20:24:05.796"/>
+<doc>Test case ini menguji apakah pengguna diarahkan kembali ke halaman login saat mencoba mengakses langsung halaman produk tanpa login.</doc>
+<status status="PASS" starttime="20240624 19:42:48.676" endtime="20240624 19:42:49.306"/>
 </test>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220916 20:24:05.798" endtime="20220916 20:24:07.940"/>
+<status status="PASS" starttime="20240624 19:42:49.307" endtime="20240624 19:42:49.432"/>
 </kw>
-<status status="PASS" starttime="20220916 20:24:01.458" endtime="20220916 20:24:07.940"/>
+<status status="PASS" starttime="20240624 19:42:44.099" endtime="20240624 19:42:49.432"/>
 </suite>
 <statistics>
 <total>
